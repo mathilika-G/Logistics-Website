@@ -37,6 +37,8 @@ How to Install:
 
 > Run: Visit http://localhost/Import_Export_Web/index.php in your browser.
 
+![Hero Section](screenshots/Hero.png)
+
 Tech Stack:
 
 Languages: PHP, JavaScript. 
