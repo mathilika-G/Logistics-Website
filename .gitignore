@@ -1,0 +1,5 @@
+# Ignore local database config if it has passwords
+db_connect.php
+
+# Ignore the uploaded products (usually we don't upload user-uploaded content to Git)
+img/products/*

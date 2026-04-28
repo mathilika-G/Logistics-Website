@@ -1,0 +1,368 @@
+body {
+    font-family: "Century Gothic", "Apple Gothic", sans-serif;
+    background-color: #f8f9fa;
+    color: #262223;
+}
+
+.navbar-brand img {
+    height: 80px !important; 
+    width: auto;
+    transition: all 0.3s ease;
+    
+    filter: brightness(0) invert(1); 
+}
+
+/* Sidebar Styling */
+.admin-sidebar {
+    height: 100vh;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #262223;
+    color: #ffffff;
+    padding-top: 25px;
+    z-index: 1000;
+    border-right: 4px solid #fcdc04; 
+}
+
+.admin-sidebar .brand-name {
+    color: #fcdc04; 
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.admin-sidebar .nav-link {
+    color: #ffffff;
+    padding: 15px 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border-left: 5px solid transparent;
+}
+
+.admin-sidebar .nav-link i {
+    width: 30px;
+    color: #b2a135; 
+}
+
+.admin-sidebar .nav-link:hover, 
+.admin-sidebar .nav-link.active {
+    background: #534015; 
+    color: #fcdc04; 
+    border-left: 5px solid #fcdc04;
+}
+
+/* Main Layout */
+.admin-main {
+    margin-left: 260px;
+    padding: 40px;
+}
+
+.section-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: none;
+    overflow: hidden;
+}
+
+/* Table Styling */
+.table-custom thead {
+    background-color: #262223;
+    color: #fcdc04;
+}
+
+.table-custom th {
+    font-weight: 500;
+    border: none;
+    padding: 15px;
+}
+
+.btn-approve {
+    background-color: #fcdc04;
+    color: #262223;
+    border: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-approve:hover {
+    background-color: #b2a135;
+    color: #ffffff;
+}
+
+.badge-weight {
+    background: #534015;
+    color: #fcdc04;
+    font-size: 11px;
+}
+
+/* Tracking Result Page Styling */
+.track-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    border: 1px solid #eee;
+}
+
+.track-header {
+    background: #262223; 
+    color: #fff;
+    padding: 30px;
+    border-bottom: 5px solid #fcdc04; 
+}
+
+.text-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #fcdc04;
+    font-weight: bold;
+}
+
+.text-gold { color: #fcdc04; }
+
+.track-body { padding: 40px; }
+
+.timeline-container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    position: relative;
+}
+
+.timeline-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.timeline-icon {
+    width: 45px;
+    height: 45px;
+    background: #eee;
+    color: #aaa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    border: 3px solid #fff;
+    transition: 0.3s;
+}
+
+.timeline-text {
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.timeline-item.active .timeline-icon {
+    background: #fcdc04;
+    color: #262223;
+    box-shadow: 0 0 10px rgba(252, 220, 4, 0.5);
+}
+
+.timeline-item.active .timeline-text { color: #262223; }
+
+.timeline-line {
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 100%;
+    height: 4px;
+    background: #eee;
+    z-index: -1;
+}
+
+.timeline-item.active .timeline-line { background: #fcdc04; }
+
+.location-update {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid #fcdc04;
+}
+
+.loc-pin {
+    color: #fcdc04;
+    font-size: 24px;
+    margin-right: 15px;
+}
+
+/* Reports Page Stats */
+.report-stats-card {
+    background: #262223;
+    color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border-bottom: 4px solid #534015;
+    transition: transform 0.3s ease;
+}
+
+.report-stats-card p {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #b2a135;
+    margin-bottom: 5px;
+}
+
+.report-stats-card h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.report-stats-card.gold-variant {
+    background: #fcdc04;
+    color: #262223;
+    border-bottom: 4px solid #b2a135;
+}
+
+.report-stats-card.gold-variant p {
+    color: #534015;
+}
+
+.report-stats-card:hover {
+    transform: translateY(-5px);
+}
+
+
+@media print {
+    .admin-sidebar, 
+    .btn, 
+    hr,
+    .navbar-brand {
+        display: none !important;
+    }
+
+    .admin-main {
+        margin-left: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .section-card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+
+    .table-custom thead {
+        background-color: #f8f9fa !important;
+        color: #000 !important;
+        border-bottom: 2px solid #000 !important;
+    }
+    
+    body {
+        background-color: #fff !important;
+    }
+}
+
+.company-header-print {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media print {
+    .company-header-print {
+        display: block !important;
+    }
+    
+    .badge-danger {
+        color: #dc3545 !important;
+        border: 1px solid #dc3545 !important;
+        background: transparent !important;
+    }
+
+    .badge-success {
+        color: #28a745 !important;
+        border: 1px solid #28a745 !important;
+        background: transparent !important;
+    }
+}
+
+/* Print Logic */
+@media print {
+    html, body {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .no-print, .admin-sidebar, .btn, .input-group, .admin-header {
+        display: none !important;
+    }
+
+    .admin-main {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .shipment-entry {
+        display: block !important;
+        width: 100% !important;
+        border: 1px solid #000 !important;
+        margin-bottom: 30px !important;
+        page-break-after: always !important; 
+    }
+
+    .company-header-print {
+        display: block !important;
+    }
+}
+
+/* admin reports */
+body { background: #f8f9fa; font-family: 'sans-serif;', sans-serif; }
+        
+        .text-gold { color: #fcdc04 !important; }
+        .bg-dark-custom { background: #1a1a1a !important; color: white !important; }
+        .btn-warning-custom { background: #fcdc04; color: #1a1a1a; font-weight: bold; border: none; border-radius: 50px; }
+        .btn-warning-custom:hover { background: #e6c900; color: #000; }
+
+        .report-header-box { 
+            background: #1a1a1a; 
+            color: white; 
+            padding: 30px; 
+            border-radius: 20px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .audit-strip { 
+            background: white; 
+            border-radius: 15px; 
+            border-left: 6px solid #fcdc04; 
+            transition: 0.3s;
+            border-top: 1px solid #eee;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        .audit-strip:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.05); }
+
+        .search-input-custom { 
+            background: rgba(255,255,255,0.1); 
+            border: 1px solid rgba(255,255,255,0.2); 
+            color: white !important; 
+            border-radius: 50px;
+            padding-left: 20px;
+        }
+        .search-input-custom::placeholder { color: #aaa; }
+
+        .badge-status { background: #fcdc04; color: #1a1a1a; font-weight: bold; border-radius: 50px; padding: 5px 15px; }
+        
+        @media print {
+            .no-print { display: none !important; }
+            .audit-strip { border: 1px solid #000 !important; border-left: 8px solid #000 !important; margin-bottom: 20px; }
+        }
